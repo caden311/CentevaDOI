@@ -3,7 +3,7 @@ import {UserService} from './services/user.service';
 import * as _ from 'lodash';
 import {SkillsService} from './services/skills.service';
 
-export const DB_URL = 'mongodb+srv://caden311:Jntc5hUlom33rhrX@centeva-2mkhc.mongodb.net/test?retryWrites=true&w=majority';
+export const DB_URL = '';
 
 export class DB {
   public static create(url?: string): Promise<any> {
