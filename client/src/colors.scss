@@ -1,0 +1,79 @@
+$blue-dark: #2F4758;
+$blue-gray: #526D80;
+$blue: #3E89BF;
+$indigo: #754BC1;
+$purple: #A043CF;
+$purple-dark: #573C59;
+$purple-gray: #7B597E;
+$purple-light: #dfd3e0;
+$pink: #E45898;
+$red: #E3515F;
+$red-light: #e8b3b9;
+$red-dark: #ce4552;
+$orange: #F1AC3A;
+$yellow: #e6d82b;
+$yellow-dark: #cebf10;
+$green: #7BC147;
+$teal: #83EFA3;
+$cyan: #15c2d8;
+$white: #FFFFFF;
+$gray-xxlight: #cfcfcf;
+$gray-xslight: #c4c4c4;
+$gray-xlight: #b5b5b5;
+$gray-light: #999999;
+$gray: #666;
+$gray-dark: #444;
+
+$primary: $blue;
+$secondary: $gray;
+$accent: $cyan;
+$warning: $yellow;
+$success: $green;
+$info: $teal;
+$danger: $red;
+$light: #F5F5F5;
+$dark: $gray-dark;
+
+$light-line: #e4e4e4;
+$hover: #edfbff;
+$hover-line: #e1fcff;
+$xlight-line: #F0F0F0;
+$purple-hover: #eaddeb;
+
+$admin: $cyan;
+$tech: $green;
+$billing: $orange;
+$propertyOperator: $indigo;
+
+$colors: (
+  "blue":         $blue,
+  "indigo":       $indigo,
+  "purple":       $purple,
+  "pink":         $pink,
+  "red":          $red,
+  "orange":       $orange,
+  "yellow":       $yellow,
+  "yellow-dark":  $yellow-dark,
+  "green":        $green,
+  "teal":         $teal,
+  "cyan":         $cyan,
+  "white":        $white,
+  "gray":         $gray,
+  "gray-dark":    $gray-dark,
+  "gray-light":   $gray-light,
+  "light-line":   $light-line,
+  "gray-xlight":  $gray-xlight,
+  "gray-xxlight": $gray-xxlight,
+);
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "accent":     $accent,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);

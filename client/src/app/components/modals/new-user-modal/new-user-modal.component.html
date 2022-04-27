@@ -1,0 +1,69 @@
+<app-modal-container (close)="onDismiss.next()">
+  <app-modal-title>
+    <i class="ion-md-person"></i>
+     Register Expertise
+  </app-modal-title>
+  <app-modal-content>
+    <div style="min-width: 500px;" class="mt-2">
+      <form [formGroup]="form" (submit)="saveUser(form)">
+        <label class="mb-2 email-label">
+          Email* <input #email (ngModelChange)="emailChanged($event)" type="text" class="form-control" formControlName="_id">
+        </label>
+        <app-fade-container [open]="form.value._id && form.valid">
+          <div style="display: flex">
+            <label class="ml-1 mr-1 inline-button">
+              First Name
+              <input type="text" class="form-control" formControlName="firstname">
+            </label>
+            <label class="ml-1 mr-1 inline-button">
+              Last Name
+              <input type="text" class="form-control" formControlName="lastname">
+            </label>
+          </div>
+        </app-fade-container>
+
+        <app-fade-container class="ml-1 mr-1 " [open]="form.value._id && form.valid">
+          <div class="skill-label ml-1 mt-4">
+            <i class="ion-md-construct mr-1"></i>
+            Add your expertise
+          </div>
+          <hr class="mt-1">
+          <div class="skill-container">
+            <div class="skills">
+              <app-type-ahead [keepFocused]="true" [clearAfterSelect]="true" [selectOnBlur]="true"
+                              [options]="skills" [canCreate]="true" placeholder="C#, Angular, UX Design, Translation, Video Production...."
+                              (selectedItemChange)="addSkill($event)"></app-type-ahead>
+            </div>
+          </div>
+        </app-fade-container>
+
+        <app-fade-container [open]="userSkills && userSkills.length > 0">
+          <div class="skill-label ml-1 mt-4">
+            <i class="ion-md-options mr-1"></i>
+            Rank your expertise
+          </div>
+          <hr class="mt-1">
+        </app-fade-container>
+        <div class="expertise-container">
+          <app-drop-down size="md" class="mr-1 ml-1 mt-1 mb-1" [hideArrow]="false" buttonType="btn-light" (deleteItem)="removeSkill(i)"
+                         *ngFor="let skill of userSkills; let i = index" [label]="skill.name" [currRank]="skill.rank">
+            <a class="dropdown-item" [ngStyle]="{'border-left': '4px solid' + colorsByRank[d.key]}" [ngClass]="{'selected': d.key === skill.rank}"
+               *ngFor="let d of (descriptions | keys).reverse()" (click)="setSkillRank(d.key, i)">
+              <span style="text-align: center; font-size: 12pt;">{{d.key}} </span>
+              <span style="font-size: 9pt;color: #3e3e3e;font-style: italic;">- {{d.value}}</span>
+            </a>
+          </app-drop-down>
+        </div>
+
+
+        <div class="submit-button" *ngIf="userSkills.length > 0 ">
+          <button class="btn btn-outline-success" [disabled]="form.invalid || userSkills.length === 0">
+            <i class="ion-md-checkmark mr-1"></i>
+            {{userAlreadyLoaded ? 'Save' : 'Submit'}}
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </app-modal-content>
+</app-modal-container>

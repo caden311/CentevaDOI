@@ -1,0 +1,23 @@
+<app-modal-container (close)="onDismiss.next()">
+
+  <app-modal-title>
+    <i class="icon-alert-circle"></i>
+    Unsaved Changes
+  </app-modal-title>
+
+  <app-modal-content>
+    You have unsaved changes that will be lost if you continue.
+  </app-modal-content>
+
+  <app-modal-actions>
+    <button (click)="onDismiss.next({drop: true})" class="btn btn-sm btn-danger float-right">
+      <i class="icon-trash"></i>
+      Close Anyway
+    </button>
+    <button (click)="onDismiss.next()" class="btn btn-sm btn-light mr-2 float-right">
+      <i class="icon-edit"></i>
+      Continue Editing
+    </button>
+  </app-modal-actions>
+
+</app-modal-container>

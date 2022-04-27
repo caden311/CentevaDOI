@@ -1,0 +1,77 @@
+label {
+  color: #7e7e7e;
+  font-size: 14pt;
+  font-weight: 400;
+}
+.email-label {
+  width: 100%;
+}
+
+.inline-button {
+  width: 50%;
+}
+
+.submit-button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-control {
+  border-radius: 5px !important;
+}
+
+.skill-label {
+  color: #7c7c7c;
+  font-size: 16pt;
+  font-weight: 500;
+}
+.skill-container {
+  display: flex;
+  align-items: center;
+  .skills{
+    flex: 9;
+  }
+  .add-skill {
+    flex:1;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+  }
+}
+.skill-description {
+  font-size: 10pt;
+  font-style: italic;
+  color: lightgray;
+}
+.expertise-container {
+  display: flex;
+  flex-flow: wrap;
+  max-width: 500px;
+}
+.badge-container {
+  .btn {
+    padding-right: 4px !important;
+  }
+  .close-icon {
+    margin: 0;
+    padding: 5px;
+    border-radius: 6px;
+    color: indianred;
+    &:hover {
+      background-color: indianred;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+.selected {
+  background-color: #78d678 !important;
+}
+.dropdown-item {
+  cursor: pointer;
+  padding: 7px 20px;
+  &:hover {
+    background-color: whitesmoke !important;
+  }
+}

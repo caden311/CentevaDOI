@@ -1,0 +1,39 @@
+<div class="home-container">
+  <img class="centeva-logo" src="../../../assets/centeva-logo.png" alt="">
+
+  <div class="search-container">
+    <div class="search">
+        <app-flip-container [open]="true">
+          <div class="page-text looking-help">Looking for help?</div>
+          <app-type-ahead class="type-ahead" placeholder="C#, Angular, UX Design, Translation, MongoDb...."
+                          [options]="skills" (selectedItemChange)="searchUsers($event)" [selectedItem]="currentSkill"></app-type-ahead>
+          <div class="btn btn-link clear-button" *ngIf="users && users.length > 0" (click)="users = []; currentSkill = null;">clear</div>
+        </app-flip-container>
+    </div>
+  </div>
+
+
+  <div *ngIf="currentSkill && users.length == 0" class="page-text">
+    Sorry, no one has experience with that..
+  </div>
+
+  <app-fade-container [open]="!currentSkill"  class="sign-up-container">
+    <div>
+      <div class="page-text" style="margin-bottom: 20px;">Willing to help?</div>
+      <div style="font-size: 14pt;" class="btn btn-outline-success" (click)="openNewUserModal()">
+        <i class="ion-md-add"></i>
+        Register Your Expertise
+      </div>
+    </div>
+  </app-fade-container>
+
+
+  <div *ngFor="let u of (users | orderBy: 'currentRank').reverse()">
+    <div class="user-tiles">
+      <app-flip-container [open]="true">
+        <app-user-tile [user]="u"></app-user-tile>
+      </app-flip-container>
+    </div>
+  </div>
+
+</div>

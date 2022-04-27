@@ -1,0 +1,12 @@
+<div #usertile id="usertile" (mouseleave)="revertTile()" (mouseenter)="animateTile()" *ngIf="user" class="tile" [ngStyle]="{'background-color': colorsByRank[user.currentRank]}">
+  <div>
+    <i class="ion-md-person mr-1"></i>
+    {{user.firstname || '' | capitalize}}
+    {{user.lastname || '' | capitalize}}
+    <span *ngIf="!user.firstname && !user.lastname">{{user._id}}</span>
+  </div>
+  <div class="email">
+    <i class="ion-md-mail mr-2"></i>
+    {{user._id}}
+  </div>
+</div>

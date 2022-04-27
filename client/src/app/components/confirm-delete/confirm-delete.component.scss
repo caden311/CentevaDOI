@@ -1,0 +1,27 @@
+// .delete-container {
+//   max-width: 450px;
+
+  .message {
+    font-size: 16pt;
+    text-align: center;
+  }
+
+  .input-prompt{
+    text-align: center;
+    font-weight: 900;
+    color: lightgray;
+    .name{
+      color: indianred;
+    }
+  }
+
+  .delete-input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .form-error {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+// }

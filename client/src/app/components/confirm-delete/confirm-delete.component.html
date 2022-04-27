@@ -1,0 +1,77 @@
+<!-- <div class="delete-container">
+
+  <div class="modal-title">
+    <i class="{{params.icon}}"></i>
+    {{params.title}}
+  </div>
+
+  <div class="my-2 p-3">
+
+    <div class="message">{{params.message}}</div>
+
+    <ng-container *ngIf="params.name">
+      <div class="input-prompt mt-2">
+        Please type <span class="name"><b>{{params.name}}</b></span> to delete.
+      </div>
+      <input class="form-control delete-input" type="text" [(ngModel)]="typedValue">
+    </ng-container>
+
+    <app-flip-container [open]="errorMessage">
+        <div class="alert-warning alert" >
+          {{errorMessage}}
+        </div>
+    </app-flip-container>
+
+
+  </div>
+
+  <div class="float-right">
+    <button class="btn btn-light" (click)="onDismiss.next()">
+      <i class="icon-x"></i>
+      {{params.cancelStr}}
+    </button>
+    <button class="btn {{params.confirmBtn}} ml-2" (click)="deleteObject()">
+      <i class="{{params.icon}}"></i>
+      {{params.confirmStr}}
+    </button>
+  </div>
+
+</div> -->
+
+<app-modal-container (close)="close()">
+  <app-modal-title>
+    <i class="{{params.icon}}"></i>
+    {{params.title}}
+  </app-modal-title>
+  <app-modal-content>
+    <div class="my-2 p-3">
+      <div class="message">{{params.message}}</div>
+
+      <ng-container *ngIf="params.name">
+        <div class="input-prompt mt-2">
+          Please type <span class="name"><b>{{params.name}}</b></span> to delete.
+        </div>
+        <input class="form-control delete-input" type="text" [(ngModel)]="typedValue">
+      </ng-container>
+
+      <app-flip-container [open]="errorMessage">
+        <div class="alert-warning alert">
+          {{errorMessage}}
+        </div>
+      </app-flip-container>
+    </div>
+  </app-modal-content>
+  <app-modal-actions>
+    <div class="float-right">
+      <button class="btn btn-light" (click)="onDismiss.next()">
+        <i class="icon-x"></i>
+        {{params.cancelStr}}
+      </button>
+      <button class="btn {{params.confirmBtn}} ml-2" (click)="deleteObject()">
+        <i class="{{params.icon}}"></i>
+        {{params.confirmStr}}
+      </button>
+    </div>
+  </app-modal-actions>
+
+</app-modal-container>

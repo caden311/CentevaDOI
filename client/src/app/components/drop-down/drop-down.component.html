@@ -1,0 +1,13 @@
+<div class="dropdown flex" [ngClass]="{'hide-arrow': hideArrow}">
+  <a class="btn btn-{{size}} {{buttonType}} dropdown-toggle border-radius" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="{{icon}} mr-1" [ngStyle]="{'color': iconColor ? iconColor : '', 'font-size': fontSize}"></i>
+    {{label}}
+    <span class="badge badge-pill badge-secondary">{{currRank}}</span>
+  </a>
+  <div class="delete-button" (click)="deleteItem.next()">
+    <i class="ion-md-close"></i>
+  </div>
+  <div class="dropdown-menu">
+    <ng-content></ng-content>
+  </div>
+</div>

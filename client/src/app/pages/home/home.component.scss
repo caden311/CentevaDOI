@@ -1,0 +1,71 @@
+
+.home-container {
+
+  .centeva-logo {
+    position: absolute;
+    width: 200px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .new-user-button {
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .type-ahead {
+    width: 100%;
+  }
+  .btn-group {
+    width: 100%;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-bottom: 1px solid lightgray;
+
+    .search {
+      position: relative;
+      margin: 65px 20px 35px;
+      max-width: 500px;
+      width: 500px;
+      .clear-button {
+        position: absolute;
+        right: 0;
+        top: 28px;
+        color: #8fed8f;
+      }
+    }
+  }
+
+  .user-tiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-text {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 18pt;
+    font-style: italic;
+    color: #a4a4a4;
+  }
+  .looking-help {
+    margin: 0 0 2px 10px;
+    text-align: left;
+    font-size: 14pt;
+  }
+
+  .sign-up-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
+
